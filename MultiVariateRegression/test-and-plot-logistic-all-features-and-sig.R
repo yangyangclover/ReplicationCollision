@@ -1,16 +1,11 @@
 # library
 library(jtools)
 library(ggplot2)
-library(flextable)
-library(webshot)
-library(boot)
-library(interactionR)
 library(ggstance)
-library(broom.mixed)
 library(ggpubr)
 require(scales)
 library(dplyr)
-library(Cairo)
+
 library(facetscales)
 
 ### functions
