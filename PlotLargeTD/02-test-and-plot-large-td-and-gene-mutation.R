@@ -6,7 +6,7 @@ library(tidyr)
 library(stringr)
 require(openxlsx)
 library(cowplot)
-library(ComplexHeatmap)
+
 
 # path
 coding_gene <- read.delim("D:/Data/REF/hg19/coding_gene/coding_gene_position_hg19.bed",header = F)
