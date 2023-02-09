@@ -6,16 +6,13 @@ module load gcc/6.2.0 R/3.6.1 bedtools/2.29.0
 
 #script
 generate_random=/path/to/00-generate-random-sv/generate-random-sv.Rscript
-#input
-input=/path/to/00-generate-random-sv/example.input
-#output
-output=/path/to/00-generate-random-sv/example.output
+
 
 # simple-sv.bedpe can be a file with all simple SVs from all samples, here only use SVs of PD10010a as an example
 samplei=PD10010a
 
 # generate 4 SVs for each real/observed SV, you can use any positive integer
-Rscript $generate_random $samplei $input/simple-sv.bedpe $output $input/k100.umap.bed 4
+Rscript $generate_random $samplei /path/to/simple-sv.bedpe /path/to/output /path/to/k100.umap.bed 4
 
 # merge real and random sv together in file real_and_random.txt
 awk 'FNR==1{if (NR==1) print  $0; next} {print $0}' $output/*.tsv > $output/real_and_random.txt
