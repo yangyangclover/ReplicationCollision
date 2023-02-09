@@ -6,6 +6,9 @@ Author: Yang Yang yangyang0110@uchicago.edu, yangyangclover@gmail.com
 
 Contact: Lixing Yang lixingyang@uchicago.edu
 
+# Citation
+To be added
+
 # Scripts Description
 ## *PlotSignature*
 ### plot-sigprofile.R
