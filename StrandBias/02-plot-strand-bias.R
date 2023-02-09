@@ -75,15 +75,15 @@ plot_function <- function(plot_df,
     hjust.text <- 1
     # label
     descip <- as.character(unique(plot_df$test))
-    if (descip %in% c("rep.vs.unzip")){
+    if (descip %in% c("rep.vs.unrep")){
       red.label <- "replicated strand"
       blue.label <- "unreplicated strand"
     }
-    if (descip %in% c("rep.vs.unzip.oppo")){
+    if (descip %in% c("rep.vs.unrep.oppo")){
       red.label <- "replicated strand"
       blue.label <- "unreplicated strand"
     }
-    if (descip %in% c("rep.vs.unzip.same")){
+    if (descip %in% c("rep.vs.unrep.same")){
       red.label <- "replicated strand"
       blue.label <- "unreplicated strand"
     }
@@ -240,37 +240,37 @@ validation_path <- file.path(large_dup_path,"validation")
 input_path=file.path(pcawg_path,paste0("sv.rt.NA.consistent8",".shrink",shrink,".simple.fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("pcawg.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("pcawg.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.oppo", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.oppo", expression == "all"),
   titlename = paste0("pcawg.consistent8.rep.vs.unrep\n(head-on)"),
   savepath = file.path(plot_path, paste0("pcawg.consistent8",".shrink",shrink,".head-on", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.same", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.same", expression == "all"),
   titlename = paste0("pcawg.consistent8.rep.vs.unrep\n(co-direction)"),
   savepath = file.path(plot_path, paste0("pcawg.consistent8",".shrink",shrink,".co-direction", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("pcawg.consistent8.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("pcawg.consistent8",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("pcawg.consistent8.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("pcawg.consistent8",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("pcawg.consistent8.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("pcawg.consistent8",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("pcawg.consistent8.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("pcawg.consistent8",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -279,27 +279,27 @@ plot_function(
 input_path=file.path(pcawg_path,paste0("sv.rt.Liver-HCC.HepG2",".shrink",shrink,".simple.fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PCAWG.Liver-HCC.HepG2.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("pcawg.Liver-HCC.HepG2",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("PCAWG.Liver-HCC.HepG2.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("pcawg.Liver-HCC.HepG2",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("PCAWG.Liver-HCC.HepG2.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("pcawg.Liver-HCC.HepG2",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("PCAWG.Liver-HCC.HepG2.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("pcawg.Liver-HCC.HepG2",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("PCAWG.Liver-HCC.HepG2.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("pcawg.Liver-HCC.HepG2",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -307,17 +307,17 @@ plot_function(
 input_path=file.path(pcawg_path,paste0("sv.rt.Ovary-AdenoCA.consistent8",".shrink",shrink,".simple.fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PCAWG.Ovary-AdenoCA.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("pcawg.Ovary-AdenoCA.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("PCAWG.Ovary-AdenoCA.consistent8.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("pcawg.Ovary-AdenoCA.consistent8",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("PCAWG.Ovary-AdenoCA.consistent8.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("pcawg.Ovary-AdenoCA.consistent8",".shrink",shrink,".match234", ".pdf"))
 )
@@ -326,34 +326,34 @@ plot_function(
 input_path=file.path(pcawg_path,paste0("sv.rt.Breast-AdenoCA.MCF7",".shrink",shrink,".simple.fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PCAWG.Breast-AdenoCA.MCF7.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("pcawg.Breast-AdenoCA.MCF7",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("PCAWG.Breast-AdenoCA.MCF7.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("pcawg.Breast-AdenoCA.MCF7",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("PCAWG.Breast-AdenoCA.MCF7.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("pcawg.Breast-AdenoCA.MCF7",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("PCAWG.Breast-AdenoCA.MCF7.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("pcawg.Breast-AdenoCA.MCF7",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("PCAWG.Breast-AdenoCA.MCF7.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("pcawg.Breast-AdenoCA.MCF7",".shrink",shrink,".normaltcga234", ".pdf"))
 )
 input_path=file.path(pcawg_path,paste0("sv.rt.Ovary-AdenoCA.consistent8",".shrink",shrink,".simple.fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PCAWG.Ovary-AdenoCA.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("pcawg.Ovary-AdenoCA.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
@@ -362,17 +362,17 @@ plot_function(
 input_path=file.path(pcawg_path,paste0("sv.rt.Stomach-AdenoCA.consistent8",".shrink",shrink,".simple.fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PCAWG.Stomach-AdenoCA.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("pcawg.Stomach-AdenoCA.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("PCAWG.Stomach-AdenoCA.consistent8.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("pcawg.Stomach-AdenoCA.consistent8",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("PCAWG.Stomach-AdenoCA.consistent8.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("pcawg.Stomach-AdenoCA.consistent8",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -380,7 +380,7 @@ plot_function(
 input_path=file.path(pcawg_path,paste0("sv.rt.Prost-AdenoCA.consistent8",".shrink",shrink,".simple.fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PCAWG.Prost-AdenoCA.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("pcawg.Prost-AdenoCA.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
@@ -389,27 +389,27 @@ plot_function(
 input_path=file.path(validation_path,"PG570","genomic_features/result_test",paste0("sv.rt.NA.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PG570.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("POG570.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("PG570.consistent8.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("POG570.consistent8",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("PG570.consistent8.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("POG570.consistent8",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("PG570.consistent8.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("POG570.consistent8",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("PG570.consistent8.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("POG570.consistent8.normaltcga234", ".pdf"))
 )
@@ -417,27 +417,27 @@ plot_function(
 input_path=file.path(validation_path,"PG570","genomic_features/result_test",paste0("sv.rt.BRCA.MCF7",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PG570.BRCA.MCF7.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("POG570.BRCA.MCF7",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("PG570.BRCA.MCF7.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("POG570.BRCA.MCF7",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("PG570.BRCA.MCF7.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("POG570.BRCA.MCF7",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("PG570.BRCA.MCF7.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("POG570.BRCA.MCF7",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("PG570.BRCA.MCF7.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("POG570.BRCA.MCF7",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -445,37 +445,37 @@ plot_function(
 input_path=file.path(validation_path,"Hartwig","genomic_features/result_test",paste0("sv.rt.NA.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("Hartwig.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("Hartwig.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.oppo", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.oppo", expression == "all"),
   titlename = paste0("Hartwig.consistent8.rep.vs.unrep\n(head-on)"),
   savepath = file.path(plot_path, paste0("Hartwig.consistent8",".shrink",shrink,".head-on", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.same", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.same", expression == "all"),
   titlename = paste0("Hartwig.consistent8.rep.vs.unrep\n(co-direction)"),
   savepath = file.path(plot_path, paste0("Hartwig.consistent8",".shrink",shrink,".co-direction", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("Hartwig.consistent8.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("Hartwig.consistent8",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("Hartwig.consistent8.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("Hartwig.consistent8",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("Hartwig.consistent8.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("Hartwig.consistent8",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("Hartwig.consistent8.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("Hartwig.consistent8",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -484,37 +484,37 @@ plot_function(
 input_path=file.path(validation_path,"Hartwig","genomic_features/result_test",paste0("sv.rt.Breast.MCF7",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("Hartwig.Breast.MCF7.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("Hartwig.Breast.MCF7",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.oppo", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.oppo", expression == "all"),
   titlename = paste0("Hartwig.Breast.MCF7.rep.vs.unrep\n(head-on)"),
   savepath = file.path(plot_path, paste0("Hartwig.Breast.MCF7",".shrink",shrink,".head-on", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.same", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.same", expression == "all"),
   titlename = paste0("Hartwig.Breast.MCF7.rep.vs.unrep\n(co-direction)"),
   savepath = file.path(plot_path, paste0("Hartwig.Breast.MCF7",".shrink",shrink,".co-direction", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("Hartwig.Breast.MCF7.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("Hartwig.Breast.MCF7",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("Hartwig.Breast.MCF7.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("Hartwig.Breast.MCF7",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("Hartwig.Breast.MCF7.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("Hartwig.Breast.MCF7",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("Hartwig.Breast.MCF7.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("Hartwig.Breast.MCF7",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -522,17 +522,17 @@ plot_function(
 input_path=file.path(validation_path,"Hartwig","genomic_features/result_test",paste0("sv.rt.Ovary.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("Hartwig.Ovary.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("Hartwig.Ovary.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("Hartwig.Ovary.consistent8.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("Hartwig.Ovary.consistent8",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("Hartwig.Ovary.consistent8.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("Hartwig.Ovary.consistent8",".shrink",shrink,".match234", ".pdf"))
 )
@@ -540,7 +540,7 @@ plot_function(
 input_path=file.path(validation_path,"Hartwig","genomic_features/result_test",paste0("sv.rt.Esophagus.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("Hartwig.Esophagus.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("Hartwig.Esophagus.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
@@ -548,37 +548,37 @@ plot_function(
 input_path=file.path(validation_path,"Hartwig","genomic_features/result_test",paste0("sv.rt.Prostate.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("Hartwig.Prostate.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("Hartwig.Prostate.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.oppo", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.oppo", expression == "all"),
   titlename = paste0("Hartwig.Prostate.consistent8.rep.vs.unrep\n(head-on)"),
   savepath = file.path(plot_path, paste0("Hartwig.Prostate.consistent8",".shrink",shrink,".head-on", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.same", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.same", expression == "all"),
   titlename = paste0("Hartwig.Prostate.consistent8.rep.vs.unrep\n(co-direction)"),
   savepath = file.path(plot_path, paste0("Hartwig.Prostate.consistent8",".shrink",shrink,".co-direction", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("Hartwig.Prostate.consistent8.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("Hartwig.Prostate.consistent8",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("Hartwig.Prostate.consistent8.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("Hartwig.Prostate.consistent8",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("Hartwig.Prostate.consistent8.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("Hartwig.Prostate.consistent8",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("Hartwig.Prostate.consistent8.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("Hartwig.Prostate.consistent8",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -586,7 +586,7 @@ plot_function(
 # input_path=file.path(validation_path,"Hartwig","genomic_features/result_test","sv.rt.Liver.HepG2.fishertest.csv")
 # input <- read.csv(input_path)
 # plot_function(
-#   plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+#   plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
 #   titlename = paste0("Hartwig.Liver.HepG2.rep.vs.unrep\n(all)"),
 #   savepath = file.path(plot_path, paste0("Hartwig.Liver.HepG2.allsv", ".pdf"))
 # )
@@ -594,37 +594,37 @@ plot_function(
 input_path=file.path(validation_path,"BRCA-EU","genomic_features/result_test",paste0("sv.rt.NA.MCF7",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("BRCA-EU.MCF7.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("BRCA-EU.MCF7",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.oppo", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.oppo", expression == "all"),
   titlename = paste0("BRCA-EU.MCF7.rep.vs.unrep\n(head-on)"),
   savepath = file.path(plot_path, paste0("BRCA-EU.MCF7",".shrink",shrink,".head-on", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip.same", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep.same", expression == "all"),
   titlename = paste0("BRCA-EU.MCF7.rep.vs.unrep\n(co-direction)"),
   savepath = file.path(plot_path, paste0("BRCA-EU.MCF7",".shrink",shrink,".co-direction", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("BRCA-EU.MCF7.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("BRCA-EU.MCF7",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("BRCA-EU.MCF7.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("BRCA-EU.MCF7",".shrink",shrink,".match234", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("BRCA-EU.MCF7.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("BRCA-EU.MCF7",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("BRCA-EU.MCF7.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("BRCA-EU.MCF7",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -632,17 +632,17 @@ plot_function(
 input_path=file.path(validation_path,"OV-AU","genomic_features/result_test",paste0("sv.rt.NA.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("OV-AU.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("OV-AU.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match1"),
   titlename = paste0("OV-AU.consistent8.rep.vs.unrep\n(match1)"),
   savepath = file.path(plot_path, paste0("OV-AU.consistent8",".shrink",shrink,".match1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "match234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "match234"),
   titlename = paste0("OV-AU.consistent8.rep.vs.unrep\n(match234)"),
   savepath = file.path(plot_path, paste0("OV-AU.consistent8",".shrink",shrink,".match234", ".pdf"))
 )
@@ -650,17 +650,17 @@ plot_function(
 input_path=file.path(validation_path,"PRAD-CA","genomic_features/result_test",paste0("sv.rt.NA.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PRAD-CA.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("PRAD-CA.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("PRAD-CA.consistent8.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("PRAD-CA.consistent8",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("PRAD-CA.consistent8.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("PRAD-CA.consistent8",".shrink",shrink,".normaltcga234", ".pdf"))
 )
@@ -668,17 +668,17 @@ plot_function(
 input_path=file.path(validation_path,"PRAD-UK","genomic_features/result_test",paste0("sv.rt.NA.consistent8",".shrink",shrink,".fishertest.csv"))
 input <- read.csv(input_path)
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "all"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "all"),
   titlename = paste0("PRAD-UK.consistent8.rep.vs.unrep\n(all)"),
   savepath = file.path(plot_path, paste0("PRAD-UK.consistent8",".shrink",shrink,".allsv", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga1"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga1"),
   titlename = paste0("PRAD-UK.consistent8.rep.vs.unrep\n(normaltcga1)"),
   savepath = file.path(plot_path, paste0("PRAD-UK.consistent8",".shrink",shrink,".normaltcga1", ".pdf"))
 )
 plot_function(
-  plot_df = input %>% dplyr::filter(test == "rep.vs.unzip", expression == "normaltcga234"),
+  plot_df = input %>% dplyr::filter(test == "rep.vs.unrep", expression == "normaltcga234"),
   titlename = paste0("PRAD-UK.consistent8.rep.vs.unrep\n(normaltcga234)"),
   savepath = file.path(plot_path, paste0("PRAD-UK.consistent8",".shrink",shrink,".normaltcga234", ".pdf"))
 )
